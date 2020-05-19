@@ -17,6 +17,7 @@ const buildControls = (props) => {
             {controls.map((control) => {
                 return (<BurgerControl key={control.label} added={() => props.ingredientAdded(control.type)} removed={() => props.ingredientRemoved(control.type)} label={control.label}></BurgerControl>)
             })}
+            <button className={classes.OrderButton} disabled={!props.purchasable} onClick={props.ordered}>ORDER NOW</button>
         </div>
     )
 };
